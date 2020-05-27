@@ -29,7 +29,7 @@ async function main(name = 'projects/my-project/secrets/my-secret/versions/1') {
   const client = new SecretManagerServiceClient();
 
   async function accessSecretVersion() {
-    const [version] = await client.accessSecretVersion({
+    const {version} = await client.accessSecretVersion({
       name: name,
     });
 
